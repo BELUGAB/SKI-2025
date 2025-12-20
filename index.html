@@ -518,23 +518,23 @@
     // CONFIG (modifie ici)
     // ==========================================================
     const TRIP = {
-      titleTop: "🏂 Ski 2025 Val Cenis ⛷️",
+      titleTop: "🏂 Ski 2025 Lanslevillard - Val Cenis ⛷️",
       station: "Val Cenis",
       start: "2025-12-27T04:00:00+01:00",
       end:   "2026-01-03T18:00:00+01:00",
     };
 
-    const MEMBERS = ["Gabriel", "Sia", "Chobin", "Chloé", "Gustavo"];
+    const MEMBERS = ["Gabriel", "Sia", "Chobin", "Chloé", "Gustavo", "Lucie", "Matthieu"];
 
     // On s'arrête au 1er janvier inclus (6 jours)
     // Chaque jour : cook[], clean[], activities[]
     const DAYS = [
-      { day: "Jour 1", date: "27 déc", cook: ["À décider"], clean: ["À décider"], activities: ["Trajet", "Check-in", "Courses", "Location matériel"] },
-      { day: "Jour 2", date: "28 déc", cook: ["À décider"], clean: ["À décider"], activities: ["Ski matin", "Pause midi", "Ski aprem", "Après-ski"] },
-      { day: "Jour 3", date: "29 déc", cook: ["À décider"], clean: ["À décider"], activities: ["Ski selon niveau", "Chocolat chaud", "Soirée jeux"] },
-      { day: "Jour 4", date: "30 déc", cook: ["À décider"], clean: ["À décider"], activities: ["Ski / balade", "Spa (si envie)", "Repas simple"] },
-      { day: "Jour 5", date: "31 déc", cook: ["À décider"], clean: ["À décider"], activities: ["Ski léger", "Courses réveillon", "Réveillon 🎉"] },
-      { day: "Jour 6", date: "1 jan", cook: ["À décider"], clean: ["À décider"], activities: ["Brunch tard", "Repos / ski light", "Chobin & Sia repartent"] },
+      { day: "Jour 1", date: "27 déc", cook: ["Gab & Sia & Chobin"], clean: ["Gus & Chloé"], activities: ["Trajet", "Courses", "Check-in", "Préparer l'appart"] },
+      { day: "Jour 2", date: "28 déc", cook: ["Gus & Chloé"], clean: ["Gab & Sia & Chobin"], activities: ["Balade / rando", "Soirée jeux"] },
+      { day: "Jour 3", date: "29 déc", cook: ["Gab & Sia & Chobin"], clean: ["Gus & Chloé"], activities: ["Initiation Ski/Snowboard", "Soirée jeux"] },
+      { day: "Jour 4", date: "30 déc", cook: ["Gus & Chloé"], clean: ["Gab & Sia & Chobin"], activities: ["Ski / Snowboard","Balade"] },
+      { day: "Jour 5", date: "31 déc", cook: ["Maman"], clean: ["Gab"], activities: ["Ski / Snowboard", "Courses réveillon", "Maman & Matthieu arrivent", "Réveillon 🎉"] },
+      { day: "Jour 6", date: "1 jan", cook: ["Maman"], clean: ["Gus"], activities: ["Brunch tard", "Repos / ski light", "Chobin & Sia repartent"] },
     ];
 
     // Ordre douche: rotation journalière
@@ -543,18 +543,18 @@
     // Photos (change toutes les 2 minutes)
     // Tu peux remplacer par tes propres URLs (Drive, Imgur, etc.)
     const PHOTOS = [
-      { url: "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=70", caption: "Montagne" },
-      { url: "https://images.unsplash.com/photo-1458442310124-dde6edb43d10?auto=format&fit=crop&w=1600&q=70", caption: "Neige" },
-      { url: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=70", caption: "Ciel d’hiver" },
+      { url: "https://skipass.fr/p/liveposts/2/4/245908/84622_84622-1.jpg", caption: "Lac du Mont Cenis" },
+      { url: "https://www.haute-maurienne-vanoise.com/content/uploads/sites/5/2025/08/2500x1500-HomePage_VC_Hiver_02.jpg", caption: "Lanslevillard" },
+      { url: "https://epp38rd5sm9.exactdn.com/wp-content/uploads/2016/12/val_cenis_haute_maurienne_vanoise_canopee_des_cimes_12-2016-1024x768.jpg?strip=all&quality=65", caption: "Lac du Mont Cenis" },
     ];
 
     const SHOPPING = [
       "Pâtes / riz + sauces",
-      "Petit-déj (pain, confiture, œufs)",
-      "Snacks (barres, chocolat)",
-      "Eau / boissons",
-      "Fromage + charcut (raclette)",
-      "Légumes (oignons, cornichons…)",
+      "Petit-déj (céréales, pain, confiture, œufs)",
+      "Snacks pour le goûter (barres, chocolat)",
+      "Eau (robinet ça va )/ boissons",
+      "Légumes ^^",
+      "De quoi faire des sandwichs",
       "Papier toilette / sopalin",
       "Éponges + liquide vaisselle",
       "Sacs poubelle",
@@ -563,11 +563,11 @@
     const CHECKLISTS = [
       { title: "Matériel & vêtements", items: [
         "Casque", "Masque / lunettes", "Gants (idéalement 2 paires)", "Bonnet", "Tour de cou",
-        "Veste + pantalon de ski", "Sous-couches", "Chaussettes ski (x2+)",
+        "Veste + pantalon de ski", "Sous-couches", "Chaussettes ski (x3+)",
         "Crème solaire + stick lèvres", "Chargeurs"
       ]},
       { title: "Admin / important", items: [
-        "Carte d’identité / permis", "CB + un peu de cash", "Téléphone chargé"
+        "Carte d’identité / permis", "CB + un peu de cash"
       ]},
       { title: "En arrivant", items: [
         "Récupérer les clés", "État des lieux", "Check Wi-Fi"
@@ -580,7 +580,7 @@
       "Email": "nurisso.sylvie@gmail.com",
       "Site": "gite-la-vachette-45.webself.net",
       "Notes": [
-        "Garder ces infos à portée (arrivée tardive, souci de clés, etc.)."
+        "Garder ces infos à portée (arrivée tardive, souci de clés, etc.)", "630€ restant à régler"
       ]
     };
 

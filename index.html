@@ -420,7 +420,6 @@
       <button class="primary" data-open="modalChecklist">✅ Checklists</button>
       <button data-open="modalLogement">🏠 Logement</button>
       <button data-open="modalTransport">🚗 Transport</button>
-      <button id="copyMsg">📩 Copier message WhatsApp</button>
     </div>
 
     <!-- 4) Planning -->
@@ -511,14 +510,12 @@
     </div>
   </div>
 
-  <div class="toast" id="toast">Copié ✅</div>
-
   <script>
     // ==========================================================
     // CONFIG (modifie ici)
     // ==========================================================
     const TRIP = {
-      titleTop: "🏂 Ski Val Cenis 2025 ⛷️",
+      titleTop: "🏂 Ski 2025 Val Cenis ⛷️",
       station: "Val Cenis",
       start: "2025-12-27T04:00:00+01:00",
       end:   "2026-01-03T18:00:00+01:00",
@@ -806,39 +803,6 @@
       if(e.key === "Escape") $$(".modalbackdrop.open").forEach(closeModal);
     });
 
-    // ==========================================================
-    // Copy message
-    // ==========================================================
-    function toast(msg="Copié ✅"){
-      const t = $("#toast");
-      t.textContent = msg;
-      t.classList.add("show");
-      setTimeout(()=>t.classList.remove("show"), 1200);
-    }
-
-    $("#copyMsg").addEventListener("click", async ()=>{
-      const msg =
-`🏔️ Ski 2025 — ${TRIP.station}
-📅 27 déc → 1 jan
-
-👥 Membres: ${MEMBERS.join(", ")}
-🚗 Drivers: Gabriel, Gustavo
-
-📌 Page QG: planning + douches + courses + photos`;
-
-      try{
-        await navigator.clipboard.writeText(msg);
-        toast("Message copié ✅");
-      }catch{
-        const ta = document.createElement("textarea");
-        ta.value = msg;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        ta.remove();
-        toast("Message copié ✅");
-      }
-    });
 
     // Boot
     renderTop();
@@ -853,4 +817,3 @@
   </script>
 </body>
 </html>
-
